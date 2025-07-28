@@ -1,0 +1,1802 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARBOR HACKATHON 2025 - Igniting Innovation in Young Minds</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+            --warning: #f39c12;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 25px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background-color: #c0392b;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 20px;
+        }
+        
+        .countdown-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+        }
+        
+        /* About Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 15px auto 0;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Why Participate Section */
+        .why-participate {
+            background-color: var(--light);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .feature-card p {
+            color: #666;
+        }
+        
+        /* Event Details Section */
+        .event-details {
+            background-color: white;
+        }
+        
+        .details-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .details-tabs {
+            flex: 1;
+            max-width: 300px;
+        }
+        
+        .tab-btn {
+            display: block;
+            width: 100%;
+            padding: 15px 20px;
+            background-color: var(--light);
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            color: var(--dark);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        
+        .tab-btn:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .tab-btn.active {
+            background-color: var(--secondary);
+            color: white;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .details-content {
+            flex: 2;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .tab-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .info-table th, .info-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .info-table th {
+            background-color: var(--light);
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .info-table tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .schedule-day {
+            margin-bottom: 40px;
+        }
+        
+        .schedule-day h4 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            border: 4px solid var(--secondary);
+        }
+        
+        .timeline-time {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .timeline-content {
+            background-color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Themes Section */
+        .themes {
+            background-color: var(--light);
+        }
+        
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .theme-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .theme-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .theme-icon {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--secondary);
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        .theme-content {
+            padding: 20px;
+        }
+        
+        .theme-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .theme-content p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Prizes Section */
+        .prizes {
+            text-align: center;
+        }
+        
+        .prize-tiers {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .prize-tier {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            width: 280px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .prize-tier:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .prize-tier::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+        }
+        
+        .tier-1::before {
+            background: linear-gradient(90deg, #ffd700, #c9b037);
+        }
+        
+        .tier-2::before {
+            background: linear-gradient(90deg, #c0c0c0, #a8a8a8);
+        }
+        
+        .tier-3::before {
+            background: linear-gradient(90deg, #cd7f32, #b87333);
+        }
+        
+        .prize-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .tier-1 .prize-icon {
+            color: #ffd700;
+        }
+        
+        .tier-2 .prize-icon {
+            color: #c0c0c0;
+        }
+        
+        .tier-3 .prize-icon {
+            color: #cd7f32;
+        }
+        
+        .prize-tier h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .prize-amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .prize-tier p {
+            color: #666;
+        }
+        
+        /* Registration Section */
+        .registration {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .registration .section-title h2 {
+            color: white;
+        }
+        
+        .registration .section-title h2::after {
+            background-color: var(--accent);
+        }
+        
+        .registration .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .registration-form {
+            max-width: 600px;
+            margin: 40px auto 0;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--secondary);
+            outline: none;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .submit-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background-color: white;
+        }
+        
+        .accordion {
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+        
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .accordion-header {
+            background-color: var(--light);
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-header:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .accordion-header::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-item.active .accordion-header::after {
+            content: '-';
+        }
+        
+        .accordion-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-item.active .accordion-content {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+        
+        .footer-column p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .details-container {
+                flex-direction: column;
+            }
+            
+            .details-tabs {
+                max-width: 100%;
+                display: flex;
+                overflow-x: auto;
+                gap: 10px;
+                padding-bottom: 10px;
+            }
+            
+            .tab-btn {
+                white-space: nowrap;
+                margin-bottom: 0;
+                border-left: none;
+                border-bottom: 4px solid transparent;
+            }
+            
+            .tab-btn.active {
+                border-left: none;
+                border-bottom: 4px solid var(--accent);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                z-index: 100;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+            }
+            
+            .countdown {
+                flex-wrap: wrap;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .countdown-item {
+                padding: 10px 15px;
+            }
+            
+            .countdown-number {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="Arbor_Logo_New-removebg-preview.png" alt="Arbor International School Logo">
+                    <div class="logo-text">
+                        <h1>ARBOR HACKATHON</h1>
+                        <p>2025</p>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#why-participate">Why Participate</a></li>
+                    <li><a href="#details">Details</a></li>
+                    <li><a href="#themes">Themes</a></li>
+                    <li><a href="#prizes">Prizes</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Igniting Innovation in Young Minds</h1>
+            <p>A dynamic two-day innovation challenge empowering students through creativity, critical thinking, and cutting-edge problem-solving</p>
+            <div>
+                <a href="#register" class="btn">Register Now</a>
+                <a href="#details" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About the Event</h2>
+                <p>The ARBOR HACKATHON 2025 is designed to cultivate 21st-century skills and promote Arbor's vision of nurturing future-ready learners</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>What is ARBOR HACKATHON?</h3>
+                    <p>The <strong>Computer Science Department</strong> is proud to present <strong>ARBOR HACKATHON 2025</strong>, a dynamic two-day innovation challenge aimed at empowering students through creativity, critical thinking, and cutting-edge problem-solving.</p>
+                    <p>With a strong emphasis on real-world application, this event provides a platform for hands-on learning through project-based challenges while encouraging teamwork, leadership, and problem-solving skills.</p>
+                    <p>We propose conducting the event on <strong>July 25th (Friday)</strong> and <strong>July 26th (Saturday), 2025</strong>, from <strong>8:30 AM to 4:30 PM</strong>, within the school premises.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Students working on a project">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Participate Section -->
+    <section class="section why-participate" id="why-participate">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Participate?</h2>
+                <p>Discover the benefits of joining this exciting innovation challenge</p>
+            </div>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Ignite Innovation</h3>
+                    <p>Spark your creativity and develop original solutions to real-world problems in a supportive environment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Hands-on Learning</h3>
+                    <p>Gain practical experience through project-based challenges that go beyond textbook knowledge.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Teamwork & Leadership</h3>
+                    <p>Collaborate with peers, develop communication skills, and take on leadership roles in your team.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Recognition & Prizes</h3>
+                    <p>Showcase your talents, win exciting prizes, and earn certificates that highlight your achievements.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Networking</h3>
+                    <p>Connect with like-minded peers, mentors, and judges who can provide valuable feedback and guidance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Future-ready Skills</h3>
+                    <p>Develop critical 21st-century skills that will benefit you in higher education and future careers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="section event-details" id="details">
+        <div class="container">
+            <div class="section-title">
+                <h2>Event Details</h2>
+                <p>Everything you need to know about ARBOR HACKATHON 2025</p>
+            </div>
+            <div class="details-container">
+                <div class="details-tabs">
+                    <button class="tab-btn active" data-tab="overview">Overview</button>
+                    <button class="tab-btn" data-tab="schedule">Schedule</button>
+                    <button class="tab-btn" data-tab="guidelines">Guidelines</button>
+                    <button class="tab-btn" data-tab="judging">Judging Criteria</button>
+                </div>
+                <div class="details-content">
+                    <!-- Overview Tab -->
+                    <div class="tab-content active" id="overview">
+                        <h3>Event Overview</h3>
+                        <table class="info-table">
+                            <tr>
+                                <th>Event Name</th>
+                                <td>ARBOR HACKATHON 2025</td>
+                            </tr>
+                            <tr>
+                                <th>Dates</th>
+                                <td>July 25th & 26th, 2025 (Friday & Saturday)</td>
+                            </tr>
+                            <tr>
+                                <th>Time</th>
+                                <td>8:30 AM – 4:30 PM</td>
+                            </tr>
+                            <tr>
+                                <th>Venue</th>
+                                <td>ICT Lab & Dance Room, Arbor International School</td>
+                            </tr>
+                            <tr>
+                                <th>Categories</th>
+                                <td>
+                                    <strong>Track 1:</strong> Classes 6–9 (Junior)<br>
+                                    <strong>Track 2:</strong> Classes 10–12 (Senior)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Team Size</th>
+                                <td>1 to 3 students per team (at least one girl member encouraged)</td>
+                            </tr>
+                            <tr>
+                                <th>Idea Submissions</th>
+                                <td>Up to 3 ideas per team</td>
+                            </tr>
+                            <tr>
+                                <th>Organized By</th>
+                                <td>Computer Science Department, Arbor International School</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <!-- Schedule Tab -->
+                    <div class="tab-content" id="schedule">
+                        <h3>Event Schedule</h3>
+                        
+                        <div class="schedule-day">
+                            <h4>Day 1 – July 25 (Friday)</h4>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-time">08:30 AM</div>
+                                    <div class="timeline-content">Team Check-in & Registration</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">09:00 AM</div>
+                                    <div class="timeline-content">Inauguration & Event Briefing</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">09:30 AM</div>
+                                    <div class="timeline-content">Theme Orientation & Problem Identification</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">10:30 AM</div>
+                                    <div class="timeline-content">Refreshment Break</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">11:00 AM</div>
+                                    <div class="timeline-content">Idea Finalization & Mentorship Round 1</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">01:00 PM</div>
+                                    <div class="timeline-content">Lunch</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">02:00 PM</div>
+                                    <div class="timeline-content">Prototype Development Begins</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">03:00 PM</div>
+                                    <div class="timeline-content">Refreshment Break</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">03:30 PM</div>
+                                    <div class="timeline-content">Mentorship Round 2</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">04:30 PM</div>
+                                    <div class="timeline-content">Day-1 Wrap-up & Instructions for Day-2</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="schedule-day">
+                            <h4>Day 2 – July 26 (Saturday)</h4>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-time">08:30 AM</div>
+                                    <div class="timeline-content">Setup & Readiness</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">09:00 AM</div>
+                                    <div class="timeline-content">Final Touches on Prototype</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">10:30 AM</div>
+                                    <div class="timeline-content">Refreshment Break</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">11:00 AM</div>
+                                    <div class="timeline-content">Final Presentations & Judging Begins</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">01:30 PM</div>
+                                    <div class="timeline-content">Lunch</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">02:30 PM</div>
+                                    <div class="timeline-content">Judging Continues</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">04:00 PM</div>
+                                    <div class="timeline-content">Refreshment Break</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">04:15 PM</div>
+                                    <div class="timeline-content">Valedictory Ceremony & Prize Distribution</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">04:30 PM</div>
+                                    <div class="timeline-content">Conclusion</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Guidelines Tab -->
+                    <div class="tab-content" id="guidelines">
+                        <h3>Participation Guidelines</h3>
+                        <ul style="list-style-type: none;">
+                            <li style="margin-bottom: 15px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                                <strong>Team Formation:</strong> Teams must be formed within the same track (Track 1: Classes 6-9 or Track 2: Classes 10-12)
+                            </li>
+                            <li style="margin-bottom: 15px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                                <strong>Team Size:</strong> Each team must consist of <strong>1 to 3 members</strong>, with at least one <strong>girl member encouraged</strong>
+                            </li>
+                            <li style="margin-bottom: 15px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                                <strong>Ideas:</strong> Up to <strong>3 ideas</strong> can be submitted by each team
+                            </li>
+                            <li style="margin-bottom: 15px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                                <strong>Equipment:</strong> Students must bring their own <strong>laptops and internet dongles</strong> for the event
+                            </li>
+                            <li style="margin-bottom: 15px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                                <strong>Mobile Phones:</strong> Allowed but their <strong>usage and safety is solely the responsibility of the students</strong>
+                            </li>
+                            <li style="margin-bottom: 15px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                                <strong>Hardware Projects:</strong> Welcomed; however, teams must <strong>arrange their own materials/components</strong>. The school will not provide hardware supplies
+                            </li>
+                            <li style="margin-bottom: 15px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                                <strong>Support:</strong> On-site mentors will guide and support teams throughout the event
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Judging Tab -->
+                    <div class="tab-content" id="judging">
+                        <h3>Judging Criteria</h3>
+                        <p>Projects will be evaluated based on the following criteria:</p>
+                        <table class="info-table">
+                            <tr>
+                                <th>Evaluation Metric</th>
+                                <th>Weightage</th>
+                            </tr>
+                            <tr>
+                                <td>Innovation & Creativity</td>
+                                <td>30%</td>
+                            </tr>
+                            <tr>
+                                <td>Relevance to the Theme</td>
+                                <td>20%</td>
+                            </tr>
+                            <tr>
+                                <td>Feasibility & Practicality</td>
+                                <td>20%</td>
+                            </tr>
+                            <tr>
+                                <td>Presentation & Communication</td>
+                                <td>15%</td>
+                            </tr>
+                            <tr>
+                                <td>Teamwork & Collaboration</td>
+                                <td>15%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total</strong></td>
+                                <td><strong>100%</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Themes Section -->
+    <section class="section themes" id="themes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hackathon Themes</h2>
+                <p>Spark your creativity with these exciting challenge themes</p>
+            </div>
+            <div class="theme-grid">
+                <div class="theme-card">
+                    <div class="theme-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <div class="theme-content">
+                        <h3>Agriculture, FoodTech & Rural Development</h3>
+                        <p>Innovate solutions for farming, food production, and rural community development.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="theme-content">
+                        <h3>Clean & Green Technology</h3>
+                        <p>Develop eco-friendly solutions for a sustainable future.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">
+                        <i class="fas fa-house-damage"></i>
+                    </div>
+                    <div class="theme-content">
+                        <h3>Disaster Management</h3>
+                        <p>Create tools and systems to predict, prevent, or manage disasters.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <div class="theme-content">
+                        <h3>Fitness & Sports</h3>
+                        <p>Innovate in sports technology, fitness tracking, or athletic performance.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="theme-content">
+                        <h3>Heritage & Culture</h3>
+                        <p>Preserve and promote cultural heritage through technology.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">
+                        <i class="fas fa-random"></i>
+                    </div>
+                    <div class="theme-content">
+                        <h3>Miscellaneous</h3>
+                        <p>Finance, Hospitality, Entertainment, and other innovative ideas.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="theme-content">
+                        <h3>Renewable & Sustainable Energy</h3>
+                        <p>Develop solutions for clean energy production and conservation.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="theme-content">
+                        <h3>Smart Education</h3>
+                        <p>Revolutionize learning through innovative educational technologies.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="theme-content">
+                        <h3>Travel & Tourism</h3>
+                        <p>Enhance travel experiences and tourism management.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="theme-content">
+                        <h3>Toys & Games</h3>
+                        <p>Create innovative toys, games, or gaming technologies.</p>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="theme-content">
+                        <h3>Transportation & Logistics</h3>
+                        <p>Improve transportation systems and logistics management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prizes Section -->
+    <section class="section prizes" id="prizes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Prizes & Recognition</h2>
+                <p>Exciting rewards await our top innovators</p>
+            </div>
+            <div class="prize-tiers">
+                <div class="prize-tier tier-1">
+                    <div class="prize-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>First Prize</h3>
+                    <div class="prize-amount">₹7,000 / ₹5,000</div>
+                    <p>Track 2 (10-12): ₹7,000<br>Track 1 (6-9): ₹5,000</p>
+                </div>
+                <div class="prize-tier tier-2">
+                    <div class="prize-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Second Prize</h3>
+                    <div class="prize-amount">₹5,000 / ₹3,000</div>
+                    <p>Track 2 (10-12): ₹5,000<br>Track 1 (6-9): ₹3,000</p>
+                </div>
+                <div class="prize-tier tier-3">
+                    <div class="prize-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Third Prize</h3>
+                    <div class="prize-amount">₹3,000 / ₹2,000</div>
+                    <p>Track 2 (10-12): ₹3,000<br>Track 1 (6-9): ₹2,000</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <p><strong>All participants</strong> will receive certificates of participation. Exceptional projects may be selected for external exhibitions and innovation platforms.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="section registration" id="register">
+        <div class="container">
+            <div class="section-title">
+                <h2>Register Now</h2>
+                <p>Secure your spot in ARBOR HACKATHON 2025</p>
+            </div>
+            <div class="registration-form">
+                <form id="hackathonForm" name="submit-to-google-sheet">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="teamName">Team Name *</label>
+                            <input type="text" id="teamName" class="form-control" required name="teamname">
+                        </div>
+                        <div class="form-group">
+                            <label for="track">Track *</label>
+                            <select id="track" class="form-control" required name="track">
+                                <option value="">Select Track</option>
+                                <option value="track1">Track 1 (Classes 6-9)</option>
+                                <option value="track2">Track 2 (Classes 10-12)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin: 25px 0 15px; color: var(--primary);">Team Leader Details</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="leaderName">Full Name *</label>
+                            <input type="text" id="leaderName" class="form-control" required name="leader-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="leaderClass">Class & Section *</label>
+                            <input type="text" id="leaderClass" class="form-control" required name="leader-class">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="leaderEmail">Email *</label>
+                            <input type="email" id="leaderEmail" class="form-control" required name="leader-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="leaderPhone">Phone Number *</label>
+                            <input type="tel" id="leaderPhone" class="form-control" required name="leader-phone">
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin: 25px 0 15px; color: var(--primary);">Team Member 2 (Optional)</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="member2Name">Full Name</label>
+                            <input type="text" id="member2Name" class="form-control" name="member-2-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="member2Class">Class & Section</label>
+                            <input type="text" id="member2Class" class="form-control" name="member-2-class">
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin: 25px 0 15px; color: var(--primary);">Team Member 3 (Optional)</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="member3Name">Full Name</label>
+                            <input type="text" id="member3Name" class="form-control" name="member-3-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="member3Class">Class & Section</label>
+                            <input type="text" id="member3Class" class="form-control" name="member-3-class">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="projectIdea">Project Idea (Brief Description) *</label>
+                        <textarea id="projectIdea" class="form-control" rows="4" required name="project"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="theme">Preferred Theme *</label>
+                        <select id="theme" class="form-control" required name="theme">
+                            <option value="">Select Theme</option>
+                            <option value="agriculture">Agriculture, FoodTech & Rural Development</option>
+                            <option value="green">Clean & Green Technology</option>
+                            <option value="disaster">Disaster Management</option>
+                            <option value="fitness">Fitness & Sports</option>
+                            <option value="heritage">Heritage & Culture</option>
+                            <option value="misc">Miscellaneous</option>
+                            <option value="energy">Renewable & Sustainable Energy</option>
+                            <option value="education">Smart Education</option>
+                            <option value="travel">Travel & Tourism</option>
+                            <option value="toys">Toys & Games</option>
+                            <option value="transport">Transportation & Logistics</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" required> I agree to the <a href="#" style="color: var(--secondary);">terms and conditions</a> *
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" name="submit">Submit Registration</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about ARBOR HACKATHON 2025</p>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Who can participate in ARBOR HACKATHON 2025?
+                    </div>
+                    <div class="accordion-content">
+                        <p>The hackathon is open to all students of Arbor International School from classes 6 to 12. Participants will be divided into two tracks:</p>
+                        <ul>
+                            <li><strong>Track 1:</strong> Classes 6-9 (Junior)</li>
+                            <li><strong>Track 2:</strong> Classes 10-12 (Senior)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        What is the team size requirement?
+                    </div>
+                    <div class="accordion-content">
+                        <p>Teams can consist of 1 to 3 members. We encourage teams to include at least one girl member to promote diversity and inclusion.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        What should we bring to the hackathon?
+                    </div>
+                    <div class="accordion-content">
+                        <p>Participants should bring:</p>
+                        <ul>
+                            <li>Their own laptops (with necessary software installed)</li>
+                            <li>Internet dongles (optional but recommended)</li>
+                            <li>Any specific hardware components if working on a hardware project</li>
+                            <li>School ID card</li>
+                            <li>Notebook and pens for brainstorming</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Can we submit multiple ideas?
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes, each team can submit up to 3 ideas. However, you'll need to focus on developing one primary idea during the hackathon.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        What if we don't have coding experience?
+                    </div>
+                    <div class="accordion-content">
+                        <p>No problem! While coding skills are helpful, they're not mandatory. The hackathon welcomes all types of innovative solutions, including:</p>
+                        <ul>
+                            <li>Conceptual designs and prototypes</li>
+                            <li>Business models and strategies</li>
+                            <li>Physical prototypes (if you bring your own materials)</li>
+                            <li>Low-code/no-code solutions</li>
+                        </ul>
+                        <p>Mentors will be available to guide all participants.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Will food be provided during the event?
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes, refreshments and lunch will be provided on both days of the hackathon. Please inform us in advance if you have any dietary restrictions.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        What are the judging criteria?
+                    </div>
+                    <div class="accordion-content">
+                        <p>Projects will be evaluated based on:</p>
+                        <ul>
+                            <li><strong>Innovation & Creativity (30%)</strong>: Originality and uniqueness of the solution</li>
+                            <li><strong>Relevance to Theme (20%)</strong>: How well the solution addresses the chosen theme</li>
+                            <li><strong>Feasibility & Practicality (20%)</strong>: Potential for real-world implementation</li>
+                            <li><strong>Presentation & Communication (15%)</strong>: Clarity and effectiveness of the pitch</li>
+                            <li><strong>Teamwork & Collaboration (15%)</strong>: How well the team worked together</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About ARBOR HACKATHON</h3>
+                    <p>A dynamic two-day innovation challenge aimed at empowering students through creativity, critical thinking, and cutting-edge problem-solving.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#why-participate">Why Participate</a></li>
+                        <li><a href="#details">Event Details</a></li>
+                        <li><a href="#themes">Themes</a></li>
+                        <li><a href="#prizes">Prizes</a></li>
+                        <li><a href="#register">Register</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Event Details</h3>
+                    <p><i class="fas fa-calendar-alt"></i> July 25-26, 2025</p>
+                    <p><i class="fas fa-clock"></i> 8:30 AM - 4:30 PM</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ICT Lab & Dance Room<br>Arbor International School</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> hackathon@arborschool.edu</p>
+                    <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                    <p><i class="fas fa-user-tie"></i> Computer Science Department</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARBOR HACKATHON. All Rights Reserved. | Organized by Computer Science Department, Arbor International School</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+         const scriptURL = 'https://script.google.com/macros/s/AKfycby4a77K2tc97mZq2o8fW7r68ky4dXPkt3MxvXDgOfamH5aSZABdJBiLAd8vK5HEHIjB/exec'
+const form = document.forms['submit-to-google-sheet']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      alert('Success! Your form has been submitted.')
+      form.reset()
+    })
+    .catch(error => {
+      alert('Error! Something went wrong. Please try again.')
+      console.error('Error!', error.message)
+    })
+})
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Tab Navigation
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Accordion Functionality
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            
+            header.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date('July 25, 2025 08:30:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+            }
+        }
+        
+        updateCountdown();
+        const countdownTimer = setInterval(updateCountdown, 1000);
+        
+        
+
+
+
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
