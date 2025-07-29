@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -206,7 +207,7 @@
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
-            height: 110vh;
+            height: 135vh;
             display: flex;
             align-items: center;
             text-align: center;
@@ -237,13 +238,12 @@
             animation: fadeInUp 1s ease forwards 1s;
         }
         
-       .hero h1 {
+        .hero h1 {
     font-size: 4rem;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-weight: 800;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     line-height: 1.2;
-    background: linear-gradient(to right, #4e8be6, #029ff3); /* Tech blue gradient */
+    background: linear-gradient(to right, #4a6fa5, #166088); /* Tech blue gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
@@ -1522,7 +1522,68 @@
                 padding: 25px 20px;
             }
         }
-    </style>
+    
+/* --- REMOVED FORM TILT EFFECT --- */
+.registration-form {
+    transform: none !important;
+    transition: none !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+.registration-form:hover {
+    transform: none !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* --- ADDITIONAL RESPONSIVENESS ENHANCEMENTS --- */
+@media (max-width: 992px) {
+    .header-content,
+    .about-content,
+    .details-container,
+    .form-row {
+        flex-direction: column !important;
+        align-items: stretch;
+    }
+    .nav-links {
+        flex-direction: column !important;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem !important;
+    }
+    .hero p {
+        font-size: 1rem !important;
+    }
+    .registration-form {
+        padding: 20px !important;
+    }
+    .btn {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+    .countdown-item {
+        min-width: 45% !important;
+    }
+    .theme-card, .feature-card, .prize-tier {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.7rem !important;
+    }
+    .section-title h2 {
+        font-size: 1.8rem !important;
+    }
+    .footer-column h3 {
+        font-size: 1.2rem;
+    }
+}
+
+</style>
 </head>
 <body>
       <!-- Loader -->
