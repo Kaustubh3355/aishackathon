@@ -206,7 +206,7 @@
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
-            height: 135vh;
+            height: 110vh;
             display: flex;
             align-items: center;
             text-align: center;
@@ -222,7 +222,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(26, 42, 108, 0.8) 0%, rgba(33, 212, 253, 0.4) 100%);
+            background: linear-gradient(135deg, rgba(26, 98, 114, 0.4) 5%, rgba(18, 59, 68, 0.4) 100%);
             z-index: 1;
         }
         
@@ -237,32 +237,33 @@
             animation: fadeInUp 1s ease forwards 1s;
         }
         
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            font-weight: 800;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            line-height: 1.2;
-            background: linear-gradient(to right, #fff, #21d4fd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero h1::after {
-            content: 'Igniting Innovation in Young Minds';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            color: transparent;
-            background: linear-gradient(to right, #d4d2d6, #e0d6d9);
-            -webkit-background-clip: text;
-            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-            animation: revealText 2s ease forwards 1.5s;
-        }
+       .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 25px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.2;
+    background: linear-gradient(to right, #4e8be6, #029ff3); /* Tech blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    overflow: hidden;
+    text-shadow: none; /* Removed since gradient provides enough contrast */
+}
+
+.hero h1::after {
+    content: 'Igniting Innovation in Young Minds';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    background: linear-gradient(to right, #f0f2f5, #e6e9ef); /* Light tech gradient */
+    -webkit-background-clip: text;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    animation: revealText 2s ease forwards 1.5s;
+}
         
         .hero p {
             font-size: 1.3rem;
@@ -1535,7 +1536,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="Arbor_Logo_New-removebg-preview.png" alt="Arbor International School Logo">
+                    <img src="/image.png" alt="Arbor International School Logo">
                     <div class="logo-text">
                         <h1>ARBOR HACKATHON</h1>
                         <p>2025</p>
