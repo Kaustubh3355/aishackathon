@@ -2293,21 +2293,24 @@
             }, 1500);
         });
 
-         const scriptURL = 'https://script.google.com/macros/s/AKfycby4a77K2tc97mZq2o8fW7r68ky4dXPkt3MxvXDgOfamH5aSZABdJBiLAd8vK5HEHIjB/exec'
-const form = document.forms['submit-to-google-sheet']
+         window.addEventListener('DOMContentLoaded', () => {
+  const scriptURL = 'https://script.google.com/macros/s/your-id/exec';
+  const form = document.forms['submit-to-google-sheet'];
 
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    .then(response => {
-      alert('Success! Your form has been submitted.')
-      form.reset()
-    })
-    .catch(error => {
-      alert('Error! Something went wrong. Please try again.')
-      console.error('Error!', error.message)
-    })
-})
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(() => {
+        alert('Success! Your form has been submitted.');
+        form.reset();
+      })
+      .catch(error => {
+        alert('Error! Something went wrong. Please try again.');
+        console.error('Error!', error.message);
+      });
+  });
+});
+
 
 // Create floating particles
         function createParticles() {
