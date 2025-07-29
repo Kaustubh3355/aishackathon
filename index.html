@@ -1524,8 +1524,14 @@
     </style>
 </head>
 <body>
+      <!-- Loader -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader"></div>
+        <div class="loader-text">Loading ARBOR HACKATHON 2025</div>
+    </div>
+
     <!-- Header -->
-    <header>
+    <header id="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
@@ -1553,10 +1559,11 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="particles" id="particles"></div>
         <div class="hero-content">
             <h1>Igniting Innovation in Young Minds</h1>
             <p>A dynamic two-day innovation challenge empowering students through creativity, critical thinking, and cutting-edge problem-solving</p>
-            <div>
+            <div class="hero-buttons">
                 <a href="#register" class="btn">Register Now</a>
                 <a href="#details" class="btn btn-secondary">Learn More</a>
             </div>
@@ -2039,7 +2046,7 @@
                 <p>Secure your spot in ARBOR HACKATHON 2025</p>
             </div>
             <div class="registration-form">
-                <form id="hackathonForm" name="submit-to-google-sheet">
+                <form id="hackathonForm" action="https://script.google.com/macros/s/AKfycbwYD0terHcJ61AgttGjJ8voFK55HOvPZ-s0uJH2CfItyiebpZAEo-x-fVoR8YFKSST5/exec">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="teamName">Team Name *</label>
@@ -2130,7 +2137,7 @@
                         </label>
                     </div>
                     
-                    <button type="submit" class="submit-btn" name="submit">Submit Registration</button>
+                    <button type="submit" class="submit-btn">Submit Registration</button>
                 </form>
             </div>
         </div>
@@ -2246,13 +2253,13 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#why-participate">Why Participate</a></li>
-                        <li><a href="#details">Event Details</a></li>
-                        <li><a href="#themes">Themes</a></li>
-                        <li><a href="#prizes">Prizes</a></li>
-                        <li><a href="#register">Register</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#why-participate"><i class="fas fa-chevron-right"></i> Why Participate</a></li>
+                        <li><a href="#details"><i class="fas fa-chevron-right"></i> Event Details</a></li>
+                        <li><a href="#themes"><i class="fas fa-chevron-right"></i> Themes</a></li>
+                        <li><a href="#prizes"><i class="fas fa-chevron-right"></i> Prizes</a></li>
+                        <li><a href="#register"><i class="fas fa-chevron-right"></i> Register</a></li>
+                        <li><a href="#faq"><i class="fas fa-chevron-right"></i> FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
