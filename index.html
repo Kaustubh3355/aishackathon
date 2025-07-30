@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2533,5 +2534,67 @@ createParticles();
         window.addEventListener('scroll', animateOnScroll);
         window.addEventListener('load', animateOnScroll);
     </script>
+
+<!-- Custom Submit Popup -->
+<div id="submitPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:99999; align-items:center; justify-content:center;">
+  <div id="popupContent" style="background:white; padding:30px; border-radius:15px; text-align:center; width:300px; box-shadow:0 5px 15px rgba(0,0,0,0.3); font-family:'Poppins', sans-serif;">
+    <div id="popupIcon" style="font-size:40px; color:#007BFF; margin-bottom:15px;">📤</div>
+    <div id="popupTitle" style="font-size:1.2rem; font-weight:bold; margin-bottom:10px;">Submitting...</div>
+    <div id="popupMessage" style="font-size:1rem; color:gray; margin-bottom:15px;">Please wait</div>
+    <div id="popupDots" class="dot-loader" style="font-size:20px;">
+      <span>.</span><span>.</span><span>.</span><span>.</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .dot-loader span {
+    animation: blink 1s infinite;
+  }
+  .dot-loader span:nth-child(2) { animation-delay: 0.2s; }
+  .dot-loader span:nth-child(3) { animation-delay: 0.4s; }
+  .dot-loader span:nth-child(4) { animation-delay: 0.6s; }
+
+  @keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("hackathonForm");
+    const popup = document.getElementById("submitPopup");
+    const title = document.getElementById("popupTitle");
+    const message = document.getElementById("popupMessage");
+    const dots = document.getElementById("popupDots");
+    const icon = document.getElementById("popupIcon");
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        popup.style.display = "flex";
+        title.innerText = "Submitting...";
+        message.innerText = "Please wait";
+        dots.style.display = "block";
+        icon.innerText = "📤";
+
+        setTimeout(() => {
+          title.innerText = "Submitted!";
+          message.innerText = "";
+          dots.style.display = "none";
+          icon.innerText = "✅";
+
+          setTimeout(() => {
+            popup.style.display = "none";
+            form.reset();
+          }, 1000);
+        }, 2000);
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
