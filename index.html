@@ -2,6 +2,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1958,82 +1959,123 @@
                 <h2>Hackathon Themes</h2>
                 <p>Spark your creativity with these exciting challenge themes</p>
             </div>
-            <div class="theme-grid">
-                <div class="theme-card">
-                    <div class="theme-icon">
-                        <i class="fas fa-tractor"></i>
-                    </div>
-                    <div class="theme-content">
-                        <h3>Agriculture, FoodTech & Rural Development</h3>
-                        <p>Build compact, tech-driven solutions to enhance farming, food processing, or rural livelihoods — with a focus on accessibility, affordability, and local impact.</p>
-                    </div>
-                </div>
-                <div class="theme-card">
-                    <div class="theme-icon">
-                        <i class="fas fa-house-damage"></i>
-                    </div>
-                    <div class="theme-content">
-                        <h3>Disaster Management</h3>
-                        <p>Create tools and systems to predict, prevent, or manage disasters.</p>
-                    </div>
-                </div>
-                <div class="theme-card">
-                    <div class="theme-icon">
-                        <i class="fas fa-running"></i>
-                    </div>
-                    <div class="theme-content">
-                        <h3>Fitness & Sports</h3>
-                        <p>Innovate in sports technology, fitness tracking, or athletic performance.</p>
-                    </div>
-                </div>
-                <div class="theme-card">
-                    <div class="theme-icon">
-                        <i class="fas fa-landmark"></i>
-                    </div>
-                    <div class="theme-content">
-                        <h3>Heritage & Culture</h3>
-                        <p>Preserve and promote cultural heritage through technology.</p>
-                    </div>
-                </div>
-                <div class="theme-card">
-                    <div class="theme-icon">
-                        <i class="fas fa-random"></i>
-                    </div>
-                    <div class="theme-content">
-                        <h3>Miscellaneous</h3>
-                        <p>Finance, Hospitality, Entertainment, and other innovative ideas.</p>
-                    </div>
-                </div>
-                <div class="theme-card">
-                    <div class="theme-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="theme-content">
-                        <h3>Smart Education</h3>
-                        <p>Revolutionize learning through innovative educational technologies.</p>
-                    </div>
-                </div>
-                <div class="theme-card">
-                    <div class="theme-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <div class="theme-content">
-                        <h3>Travel & Tourism</h3>
-                        <p>Enhance travel experiences and tourism management.</p>
-                    </div>
-                </div>
-                <div class="theme-card">
-                    <div class="theme-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <div class="theme-content">
-                        <h3>Transportation & Logistics</h3>
-                        <p>Improve transportation systems and logistics management.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            
+<div class="theme-slider-wrapper">
+  <button class="theme-slider-btn left" onclick="scrollThemes(-1)">&#10094;</button>
+  <div class="theme-slider" id="themeSlider">
+    <div class="theme-card">
+      <div class="theme-icon"><i class="fas fa-tractor"></i></div>
+      <div class="theme-content">
+        <h3>Agriculture, FoodTech & Rural Development</h3>
+        <p>Build compact, tech-driven solutions to enhance farming, food processing, or rural livelihoods — with a focus on accessibility, affordability, and local impact.</p>
+      </div>
+    </div>
+    <div class="theme-card">
+      <div class="theme-icon"><i class="fas fa-house-damage"></i></div>
+      <div class="theme-content">
+        <h3>Disaster Management</h3>
+        <p>Create tools and systems to predict, prevent, or manage disasters.</p>
+      </div>
+    </div>
+    <div class="theme-card">
+      <div class="theme-icon"><i class="fas fa-running"></i></div>
+      <div class="theme-content">
+        <h3>Fitness & Sports</h3>
+        <p>Innovate in sports technology, fitness tracking, or athletic performance.</p>
+      </div>
+    </div>
+    <div class="theme-card">
+      <div class="theme-icon"><i class="fas fa-landmark"></i></div>
+      <div class="theme-content">
+        <h3>Heritage & Culture</h3>
+        <p>Preserve and promote cultural heritage through technology.</p>
+      </div>
+    </div>
+    <div class="theme-card">
+      <div class="theme-icon"><i class="fas fa-random"></i></div>
+      <div class="theme-content">
+        <h3>Miscellaneous</h3>
+        <p>Finance, Hospitality, Entertainment, and other innovative ideas.</p>
+      </div>
+    </div>
+    <div class="theme-card">
+      <div class="theme-icon"><i class="fas fa-graduation-cap"></i></div>
+      <div class="theme-content">
+        <h3>Smart Education</h3>
+        <p>Revolutionize learning through innovative educational technologies.</p>
+      </div>
+    </div>
+    <div class="theme-card">
+      <div class="theme-icon"><i class="fas fa-plane"></i></div>
+      <div class="theme-content">
+        <h3>Travel & Tourism</h3>
+        <p>Enhance travel experiences and tourism management.</p>
+      </div>
+    </div>
+    <div class="theme-card">
+      <div class="theme-icon"><i class="fas fa-truck"></i></div>
+      <div class="theme-content">
+        <h3>Transportation & Logistics</h3>
+        <p>Improve transportation systems and logistics management.</p>
+      </div>
+    </div>
+  </div>
+  <button class="theme-slider-btn right" onclick="scrollThemes(1)">&#10095;</button>
+</div>
+
+<style>
+.theme-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.theme-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.theme-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.theme-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5rem;
+  border-radius: 8px;
+}
+
+.theme-slider-btn.left { left: 10px; }
+.theme-slider-btn.right { right: 10px; }
+</style>
+
+<script>
+function scrollThemes(direction) {
+  const slider = document.getElementById('themeSlider');
+  const cardWidth = 320; // card + margin
+  slider.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+}
+</script>
+
+</section>
 
     <!-- Prizes Section -->
     <section class="section prizes" id="prizes">
